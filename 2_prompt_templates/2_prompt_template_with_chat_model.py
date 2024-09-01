@@ -1,13 +1,14 @@
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from langchain.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
+from model import use_model
 
 # Load environment variables from .env
-load_dotenv()
+# load_dotenv()
 
 # Create a ChatOpenAI model
-model = ChatOpenAI(model="gpt-4o")
-
+# model = ChatOpenAI(model="gpt-4o")
+model=use_model()
 # PART 1: Create a ChatPromptTemplate using a template string
 print("-----Prompt from Template-----")
 template = "Tell me a joke about {topic}."
